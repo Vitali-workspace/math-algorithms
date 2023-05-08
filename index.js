@@ -12,3 +12,7 @@ function throttle(fn, delay) {
   };
 }
 
+const logHello = () => console.log('Hello!');
+const throttledLogHello = throttle(logHello, 1000);
+setInterval(throttledLogHello, 500);
+
