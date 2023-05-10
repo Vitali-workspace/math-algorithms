@@ -30,4 +30,9 @@ function debounce(fn, delay) {
   };
 }
 
+const debounceHello = () => console.log('Hello!');
+const debouncedLogHello = debounce(logHello, 1000);
+setInterval(debouncedLogHello, 500);
+
+
 
