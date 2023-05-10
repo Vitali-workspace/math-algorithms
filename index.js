@@ -35,4 +35,18 @@ const debouncedLogHello = debounce(logHello, 1000);
 setInterval(debouncedLogHello, 500);
 
 
+function debugDecorator(fn) {
+  return function (...args) {
+    console.log('Calling function with arguments:', ...args);
+    const result = fn(...args);
+    console.log('Function returned:', result);
+    return result;
+  };
+}
 
+function add(a, b) {
+  return a + b;
+}
+
+const debugAdd = debugDecorator(add);
+debugAdd(2, 3);
