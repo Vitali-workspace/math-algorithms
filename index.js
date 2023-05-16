@@ -73,3 +73,10 @@ const fibonacci = memoize(function (n) {
 });
 console.log(fibonacci(10)); // 55
 
+
+window.addEventListener('beforeunload', function (event) {
+  event.preventDefault();
+  event.returnValue = '';
+  alert('Are you sure you want to leave?');
+});
+
