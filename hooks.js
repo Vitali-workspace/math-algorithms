@@ -1,4 +1,6 @@
-import React, { useRef } from 'react';
+import ReactDOM from 'react-dom';
+import React, { useRef, useState } from 'react';
+
 
 function MyComponent() {
   const inputRef = useRef(null);
