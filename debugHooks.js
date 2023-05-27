@@ -1,9 +1,9 @@
-import { useState } from 'react';
+import { useState, useDebugValue } from 'react';
 
 function useCounter(initialValue) {
   const [count, setCount] = useState(initialValue);
 
-
+  useDebugValue(`Count: ${count}`);
 
   function increment() {
     setCount(count + 1);
